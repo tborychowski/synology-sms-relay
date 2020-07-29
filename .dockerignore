@@ -3,6 +3,8 @@
 *.md
 .*
 docker-compose.yml
+release.js
+
 Dockerfile
 LICENSE
 

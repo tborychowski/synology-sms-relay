@@ -10,16 +10,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/', (req, res) => {
-	logger.info('Received: ' + JSON.stringify(req.query));
-	const cmd = [ path.join(process.cwd(), 'script.sh'), `"${req.query.text}"` ];
+	const params = req.query && req.query.text ? req.query : req.body;
+	logger.info('Received: ' + JSON.stringify(params));
+	const cmd = [ path.join(process.cwd(), 'script.sh'), `"${params.text || params.message}"` ];
 	exec(cmd.join(' '), (err, stdout) => {
 		if (err) {
 			logger.error(err);
-			res.status(200).json({result: 'error', msg: err });
+			res.status(200).json({ result: 'error', msg: err });
 		}
 		else {
 			logger.info('Message sent. ' + stdout);
-			res.status(200).json({result: 'success', msg: stdout });
+			res.status(200).json({ result: 'success', msg: stdout });
 		}
 	});
 });
