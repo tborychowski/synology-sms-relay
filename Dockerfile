@@ -1,4 +1,5 @@
 FROM node:alpine
+RUN apk --no-cache add curl
 EXPOSE 3000
 WORKDIR /app
 COPY *.* ./
