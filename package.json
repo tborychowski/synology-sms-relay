@@ -4,7 +4,7 @@
 	"license": "GPL-3.0-or-later",
 	"repository": {
 		"type": "git",
-		"url": ""
+		"url": "https://github.com/tborychowski/synology-sms-relay.git"
 	},
 	"scripts": {
 		"start": "nodemon ./server/index.js"
