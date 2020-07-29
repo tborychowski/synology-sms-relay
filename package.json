@@ -1,0 +1,27 @@
+{
+	"name": "synology-sms-relay",
+	"version": "0.0.1",
+	"license": "GPL-3.0-or-later",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"scripts": {
+		"start": "nodemon ./server/index.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"express": "^4.17.1",
+		"winston": "^3.3.3",
+		"winston-daily-rotate-file": "^4.5.0"
+	},
+	"devDependencies": {
+		"chalk": "^4.1.0",
+		"detect-indent": "^6.0.0",
+		"inquirer": "^7.3.3",
+		"nodemon": "^2.0.4",
+		"ora": "^4.0.5",
+		"semver": "^7.3.2",
+		"simple-git": "^2.15.0"
+	}
+}

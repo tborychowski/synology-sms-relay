@@ -1,0 +1,11 @@
+---
+version: '3.7'
+services:
+  sermon:
+    container_name: synology-sms-relay
+    image: tborychowski/synology-sms-relay
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./script.sh:/app/script.sh
