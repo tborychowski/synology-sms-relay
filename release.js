@@ -127,8 +127,8 @@ function release () {
 			spinner.text = 'Pushing images to the docker hub...';
 			spinner.start();
 
-			const cmd = 'docker push tborychowski/sermon:latest && ' +
-				'docker push tborychowski/sermon:' + APP.version;
+			const cmd = `docker push tborychowski/${APP.name}:latest && ` +
+				`docker push tborychowski/${APP.name}:${APP.version}`;
 			return run(cmd).catch(() => {});
 		})
 		.then(() => {
