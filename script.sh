@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # example pushover notification
 # MSG=$(printf "<font color=\"#408062\">%s</font>" "$@")
