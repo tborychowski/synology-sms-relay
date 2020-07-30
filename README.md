@@ -37,7 +37,7 @@ chmod +x script.sh
 ```sh
 docker-compose up -d
 ```
-It doesn't have a UI so you won't see anything, it accepts any verb (although Synology sends its requests using `POST`), so to test this just paste this URL in your browser's address bar:<br>
+It doesn't have a UI so you won't see anything, it accepts any verb (we'll use `POST` in this setup), so to test this just paste this URL in your browser's address bar:<br>
 http://localhost:3000/?text=Hello%20world&=
 
 If that works - move on to setting up Synology.
