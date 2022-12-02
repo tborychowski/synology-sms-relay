@@ -18,7 +18,7 @@ const consoleFormat = winston.format.combine(
 	winston.format.printf(print)
 );
 
-var fileLog = new winston.transports.DailyRotateFile({
+const fileLog = new winston.transports.DailyRotateFile({
 	filename: 'logs/%DATE%.log',
 	datePattern: 'YYYY-MM-DD',
 	// zippedArchive: true,
